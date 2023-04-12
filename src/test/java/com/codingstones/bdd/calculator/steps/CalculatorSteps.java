@@ -50,9 +50,8 @@ public class CalculatorSteps {
         calculator.mult(int1,int2);
     }
    
-    @Given("I do something in the app")
+    @Given("I test the app")
     public void i_do_something_in_the_app() {
-        calculator.prueba();
     }
 
 

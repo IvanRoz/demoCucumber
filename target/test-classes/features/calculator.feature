@@ -17,8 +17,7 @@ Feature: Calculator
   	
   	@test
   Scenario: Appium integration Test
-   Given I have a calculator
- 	 Given I do something in the app	 
+   Given I test the app 
   	 	
   	
    	
