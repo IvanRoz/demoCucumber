@@ -28,5 +28,9 @@ public class CalculatorPage {
     	value = int1 * int2;
     	System.out.println(value);
 	}
+    public void pot(Integer int1, Integer int2) {
+    	value = (int) Math.pow(int1, int2);
+    	System.out.println(value);
+	}
     
 }
