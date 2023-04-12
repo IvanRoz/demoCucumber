@@ -1,6 +1,10 @@
 package com.codingstones.bdd.calculator;
 
-public class CalculatorPage {
+import org.openqa.selenium.By;
+
+import com.codingstones.bdd.calculator.BaseClass;
+
+public class CalculatorPage extends BaseClass{
 	
     private int value;
 	
@@ -28,5 +32,10 @@ public class CalculatorPage {
     	value = int1 * int2;
     	System.out.println(value);
 	}
+    
+    
+    public void prueba() {
+    	driver.findElement(By.name("Crear")).click();;
+    }
     
 }

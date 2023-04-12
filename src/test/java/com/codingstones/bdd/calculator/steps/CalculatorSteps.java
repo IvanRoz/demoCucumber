@@ -1,5 +1,6 @@
 package com.codingstones.bdd.calculator.steps;
 
+import com.codingstones.bdd.calculator.BaseClass;
 import com.codingstones.bdd.calculator.CalculatorPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,6 +14,14 @@ import static org.junit.Assert.assertNotNull;
 public class CalculatorSteps {
 
     static CalculatorPage calculator;
+    
+	static BaseClass baseClass = new BaseClass();
+	
+	@BeforeAll
+	public static void before_or_after_all() {
+		
+		baseClass.setup();
+	}
 
     @Given("^I have a calculator$")
     public void i_have_a_calculator() throws Throwable {
@@ -40,6 +49,17 @@ public class CalculatorSteps {
     public void i_multiply_and(Integer int1, Integer int2) {
         calculator.mult(int1,int2);
     }
+   
+    @Given("I do something in the app")
+    public void i_do_something_in_the_app() {
+        calculator.prueba();
+    }
+
+
+
+
+
+
 
 
 }

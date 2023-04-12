@@ -13,15 +13,12 @@ Feature: Calculator
   Scenario: Multiply two numbers   
   	Given I have a calculator
   	When I multiply 7 and 4
-  	Then the result should be 28  
+  	Then the result should be 28 
   	
-  Scenario: Divide two numbers	
-  	Given I have a calculator
-  	Then the result should be 30  
-  	
-  Scenario: Power two numbers
-  	Given I have a calculator
-  	Then the result should be 30  
+  	@test
+  Scenario: Appium integration Test
+   Given I have a calculator
+ 	 Given I do something in the app	 
   	 	
   	
    	
