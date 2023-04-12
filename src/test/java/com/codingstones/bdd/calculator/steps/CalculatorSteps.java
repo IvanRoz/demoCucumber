@@ -40,6 +40,12 @@ public class CalculatorSteps {
     public void i_multiply_and(Integer int1, Integer int2) {
         calculator.mult(int1,int2);
     }
+    
+    @When("I divide {int} and {int}")
+    public void i_divide_and(Integer int1, Integer int2) {
+        calculator.divide(int1, int2);
+    }
 
-
+    
+    
 }
