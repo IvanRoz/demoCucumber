@@ -17,19 +17,10 @@ Feature: Calculator
   	
   Scenario: Divide two numbers	
   	Given I have a calculator
-  	Then the result should be 30  
+  	When I divide 8 and 2
+  	Then the result should be 4
   	
   Scenario: Power two numbers
   	Given I have a calculator
-  	When the number is 2 and the exponent is 5
-  	Then the result should be 32
-  	 	
-  	
-   	
-    
-
-
-  
- 
-   
-    
+  	Then the result should be 30  
+       

@@ -11,7 +11,6 @@ public class CalculatorPage {
     }
     
     
-    
     public void subtract(int aNumber, int anotherNumber) {
         value = aNumber - anotherNumber;
         System.out.println(value);
@@ -24,8 +23,8 @@ public class CalculatorPage {
     }
 
 
-    public void mult(Integer int1, Integer int2) {
-    	value = int1 * int2;
+    public void mult(Integer aNumber, Integer anotherNumber) {
+    	value = aNumber * anotherNumber;
     	System.out.println(value);
 	}
     public void pot(Integer int1, Integer int2) {
@@ -33,4 +32,8 @@ public class CalculatorPage {
     	System.out.println(value);
 	}
     
+    public void divide(int aNumber, int anotherNumber) {
+    	value = aNumber / anotherNumber;
+    	System.out.println(value);
+    }
 }
