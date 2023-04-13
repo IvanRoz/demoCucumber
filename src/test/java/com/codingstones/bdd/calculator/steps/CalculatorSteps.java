@@ -49,6 +49,16 @@ public class CalculatorSteps {
     public void i_multiply_and(Integer int1, Integer int2) {
         calculator.mult(int1,int2);
     }
+        
+    @When("I divide {int} and {int}")
+    public void i_divide_and(Integer int1, Integer int2) {
+        calculator.divide(int1, int2);
+    }
+    
+    @When("the number is {int} and the exponent is {int}")
+    public void the_number_is_and_the_exponent_is(Integer int1, Integer int2) {
+    	calculator.pot(int1,int2);
+    }
    
     @Given("I test the app")
     public void i_do_something_in_the_app() {

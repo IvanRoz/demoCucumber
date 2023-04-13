@@ -37,5 +37,4 @@ Feature: Calculator
   
  
    
-    
->>>>>>> Development/Appium_integration:src/test/resources/features/calculator.feature
+
