@@ -13,7 +13,7 @@ Feature: Calculator
   Scenario: Multiply two numbers   
   	Given I have a calculator
   	When I multiply 7 and 4
-  	Then the result should be 28  
+  	Then the result should be 28 
   	
   Scenario: Divide two numbers	
   	Given I have a calculator
@@ -25,4 +25,17 @@ Feature: Calculator
   	When the number is 2 and the exponent is 5
   	Then the result should be 32
   	  
-       
+  	@test
+  Scenario: Appium integration Test
+   Given I test the app 
+  	 	
+  	
+   	
+    
+
+
+  
+ 
+   
+    
+>>>>>>> Development/Appium_integration:src/test/resources/features/calculator.feature
