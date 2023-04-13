@@ -22,5 +22,7 @@ Feature: Calculator
   	
   Scenario: Power two numbers
   	Given I have a calculator
-  	Then the result should be 30  
+  	When the number is 2 and the exponent is 5
+  	Then the result should be 32
+  	  
        
