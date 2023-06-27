@@ -44,7 +44,7 @@ Scenario: Login with Negocio account
 	Then I Write the email "qa-tests-dev-29-01@getnada.com"
 	Then I tap in Negocio password text field
 	Then I Write the password "Qa654321$"
-	When I tap in "INICIAR SESION" button
+	When I tap in "INICIAR SESIÓN" button
 	Then I validate that automatic upload alert exists
 	When I tap in "Cancelar" button
 	
