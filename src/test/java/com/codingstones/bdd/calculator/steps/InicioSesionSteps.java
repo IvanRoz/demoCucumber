@@ -41,6 +41,20 @@ public class InicioSesionSteps {
 		inicioSesion.FindAlert();
 	}
 
+	@When("I tap in {string} text")
+	public void i_tap_in_text(String stringText) {
+	    inicioSesion.PressTxtSignIn(stringText);
+	}
+	@Then("I tap in Negocio email text field")
+	public void i_tap_in_negocio_email_text_field() {
+		inicioSesion.PressTxtFieldEmailNegocio();
+	}
+	@Then("I tap in Negocio password text field")
+	public void i_tap_in_negocio_password_text_field() {
+		inicioSesion.PressTxtFieldPasswordNegocio();
+	}
+
+
 
 
 
