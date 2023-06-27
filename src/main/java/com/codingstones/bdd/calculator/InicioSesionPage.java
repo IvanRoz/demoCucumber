@@ -55,4 +55,8 @@ public class InicioSesionPage extends BaseClass{
 		
 	}
 	
+	public void ModificacionAMain() {
+		int test;
+	}
+	
 }
