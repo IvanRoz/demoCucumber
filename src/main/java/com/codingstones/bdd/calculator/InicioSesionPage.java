@@ -59,4 +59,8 @@ public class InicioSesionPage extends BaseClass{
 		int testbranch;
 	}
 	
+	public void branchTest2() {
+		int testbranch2;
+	}
+	
 }
