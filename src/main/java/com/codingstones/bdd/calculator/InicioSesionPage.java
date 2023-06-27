@@ -11,6 +11,8 @@ public class InicioSesionPage extends BaseClass{
 	String xPathPassword = "//XCUIElementTypeOther[@name=\"Claro drive\"]/XCUIElementTypeOther[8]/XCUIElementTypeSecureTextField";
 	String xPathEmailNegocio = "//XCUIElementTypeOther[@name=\"Claro drive\"]/XCUIElementTypeOther[8]/XCUIElementTypeTextField";
 	String xPathPasswordNegocio = "//XCUIElementTypeOther[@name=\"Claro drive\"]/XCUIElementTypeOther[9]/XCUIElementTypeSecureTextField";
+	String xPathEmailCV = "//XCUIElementTypeOther[@name=\"Claro drive\"]/XCUIElementTypeOther[7]/XCUIElementTypeTextField";
+	String xPathPasswordCV = "//XCUIElementTypeOther[@name=\"Claro drive\"]/XCUIElementTypeOther[8]/XCUIElementTypeSecureTextField";
 	
 	public void PressButtonSignIn(String buttonName){
 		driver.findElement(By.name(buttonName)).click(); //busca el elemento con findElement, interactúa con .click
@@ -52,6 +54,20 @@ public class InicioSesionPage extends BaseClass{
 	}
 	public void WriteNegocioPassword(String pass) {
 		driver.findElement(By.xpath(xPathPasswordNegocio)).sendKeys(pass);
+		
+	}
+	public void PressTxtFieldEmailClaroVideo() {
+		driver.findElement(By.xpath(xPathEmailCV)).click();
+	}
+	public void WriteEmailClaroVideo(String emailCV) {
+		driver.findElement(By.xpath(emailCV)).sendKeys(emailCV);
+		
+	}
+	public void PressTxtFieldPasswordClaroVideo() {
+		driver.findElement(By.xpath(xPathPasswordCV)).click();
+	}
+	public void WritePasswordClaroVideo(String passCV) {
+		driver.findElement(By.xpath(xPathPasswordCV)).sendKeys(passCV);
 		
 	}
 	
