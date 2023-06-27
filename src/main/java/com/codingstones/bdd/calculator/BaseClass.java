@@ -6,6 +6,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.touch.offset.PointOption;
+import org.openqa.selenium.Point;
 
 import io.appium.java_client.ios.IOSDriver;
 
@@ -63,5 +66,15 @@ public class BaseClass {
 			}
 
 		}
+		
+		//Metodo que da tap en otra parte de la pantalla para cerrar el teclado.
+		public void hideKeyboard() {
+			Point keyboardPoint = driver.findElement(By.className("XCUIElementTypeKeyboard")).getLocation();
+
+			TouchAction touchAction = new TouchAction(driver);
+
+			touchAction.tap(new PointOption().withCoordinates(keyboardPoint.getX() + 2, keyboardPoint.getY() + 0)).perform();
+
+			}
 
 }

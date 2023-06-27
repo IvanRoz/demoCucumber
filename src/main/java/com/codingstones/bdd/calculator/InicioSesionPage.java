@@ -3,6 +3,7 @@
 package com.codingstones.bdd.calculator;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 
 
 
@@ -57,6 +58,7 @@ public class InicioSesionPage extends BaseClass{
 		
 	}
 	public void PressTxtFieldEmailClaroVideo() {
+		waitForElement(By.xpath(xPathEmailCV),2);
 		driver.findElement(By.xpath(xPathEmailCV)).click();
 	}
 	public void WriteEmailClaroVideo(String emailCV) {
@@ -68,5 +70,6 @@ public class InicioSesionPage extends BaseClass{
 	}
 	public void WritePasswordClaroVideo(String passCV) {
 		driver.findElement(By.xpath(xPathPasswordCV)).sendKeys(passCV);
+		driver.findElement(By.xpath(xPathPasswordCV)).sendKeys(Keys.ENTER);
 	}
 }
