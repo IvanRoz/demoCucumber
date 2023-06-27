@@ -9,6 +9,8 @@ import org.openqa.selenium.By;
 public class InicioSesionPage extends BaseClass{
 	String xPathEmail1 = "//XCUIElementTypeOther[@name=\"Claro drive\"]/XCUIElementTypeOther[7]/XCUIElementTypeTextField";
 	String xPathPassword = "//XCUIElementTypeOther[@name=\"Claro drive\"]/XCUIElementTypeOther[8]/XCUIElementTypeSecureTextField";
+	String xPathEmailNegocio = "//XCUIElementTypeOther[@name=\"Claro drive\"]/XCUIElementTypeOther[7]/XCUIElementTypeTextField";
+	String xPathPasswordNegocio = "//XCUIElementTypeOther[@name=\"Claro drive\"]/XCUIElementTypeOther[8]/XCUIElementTypeSecureTextField";
 	
 	public void PressButtonSignIn(String buttonName){
 		driver.findElement(By.name(buttonName)).click(); //busca el elemento con findElement, interactúa con .click
@@ -31,6 +33,18 @@ public class InicioSesionPage extends BaseClass{
 		driver.findElement(By.name("¿Quieres configurar las cargas de cámara?"));
 		driver.findElement(By.name("Cancelar"));
 		driver.findElement(By.name("Aceptar"));
+	}
+	public void PressTxtSignIn(String stringText) {
+		driver.findElement(By.name(stringText)).click();
+		
+	}
+	public void PressTxtFieldEmailNegocio() {
+		driver.findElement(By.xpath(xPathEmailNegocio)).click();
+		
+	}
+	public void PressTxtFieldPasswordNegocio() {
+		driver.findElement(By.xpath(xPathPasswordNegocio)).click();
+		
 	}
 	
 }
