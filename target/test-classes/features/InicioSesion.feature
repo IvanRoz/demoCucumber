@@ -47,4 +47,14 @@ Scenario: Login with Negocio account
 	Then I validate that automatic upload alert exists
 	When I tap in "Cancelar" button
 	
-	
+@tagInicioClaroVideo
+Scenario: Login with Claro Video account
+	When I tap in "INICIA SESIÓN" button
+	When I tap in "Claro video" text
+	Then I tap in Claro video email text field
+	Then I Write the Claro video email "chris.prod03@getnada.com"
+	Then I tap in Claro video password text field
+	Then I Write the Claro video password "Qa654321!"
+	When I tap in "INICIAR SESIÓN" button
+	Then I validate that automatic upload alert exists
+	When I tap in "Cancelar" button
