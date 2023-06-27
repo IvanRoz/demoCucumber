@@ -60,7 +60,7 @@ public class InicioSesionPage extends BaseClass{
 		driver.findElement(By.xpath(xPathEmailCV)).click();
 	}
 	public void WriteEmailClaroVideo(String emailCV) {
-		driver.findElement(By.xpath(emailCV)).sendKeys(emailCV);
+		driver.findElement(By.xpath(xPathEmailCV)).sendKeys(emailCV);
 		
 	}
 	public void PressTxtFieldPasswordClaroVideo() {
@@ -68,7 +68,5 @@ public class InicioSesionPage extends BaseClass{
 	}
 	public void WritePasswordClaroVideo(String passCV) {
 		driver.findElement(By.xpath(xPathPasswordCV)).sendKeys(passCV);
-		
 	}
-	
 }
