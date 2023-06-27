@@ -26,6 +26,11 @@ public class InicioSesionSteps {
 		inicioSesion.WriteEmail(email);
 	}
 	
+	@Then("I Write the Negocio email {string}")
+	public void i_write_the_Negocio_email(String email) {
+		inicioSesion.WriteNegocioEmail(email);
+	}
+	
 	@Then("I tap in password text field")
 	public void i_tap_in_password_text_field(){
 		inicioSesion.PressPasswordFieldEmail();
@@ -34,6 +39,11 @@ public class InicioSesionSteps {
 	@Then("I Write the password {string}")
 	public void i_write_the_password(String pass) {
 		inicioSesion.WritePassword(pass);
+	}
+	
+	@Then("I Write the Negocio password {string}")
+	public void i_write_the_Negocio_password(String pass) {
+		inicioSesion.WriteNegocioPassword(pass);
 	}
 
 	@Then("I validate that automatic upload alert exists")

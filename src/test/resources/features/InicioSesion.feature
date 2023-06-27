@@ -35,18 +35,16 @@ Scenario: Login with Telcel account
 	When I tap in "SIGUIENTE" button
 	Then I validate that automatic upload alert exists
 	When I tap in "Cancelar" button
-	
+
 @tagInicioNegocio
 Scenario: Login with Negocio account
-	When I tap in "INICIA SESIÓN" button
-	When I tap in "Claro video" text
+	When I tap in "IR A CLARO DRIVE NEGOCIO" text
 	Then I tap in Negocio email text field
-	Then I Write the email "qa-tests-dev-29-01@getnada.com"
+	Then I Write the Negocio email "qa-tests-dev-29-01@getnada.com"
 	Then I tap in Negocio password text field
-	Then I Write the password "Qa654321$"
+	Then I Write the Negocio password "Qa654321$"
 	When I tap in "INICIAR SESIÓN" button
 	Then I validate that automatic upload alert exists
 	When I tap in "Cancelar" button
-	
 	
 	

@@ -9,8 +9,8 @@ import org.openqa.selenium.By;
 public class InicioSesionPage extends BaseClass{
 	String xPathEmail1 = "//XCUIElementTypeOther[@name=\"Claro drive\"]/XCUIElementTypeOther[7]/XCUIElementTypeTextField";
 	String xPathPassword = "//XCUIElementTypeOther[@name=\"Claro drive\"]/XCUIElementTypeOther[8]/XCUIElementTypeSecureTextField";
-	String xPathEmailNegocio = "//XCUIElementTypeOther[@name=\"Claro drive\"]/XCUIElementTypeOther[7]/XCUIElementTypeTextField";
-	String xPathPasswordNegocio = "//XCUIElementTypeOther[@name=\"Claro drive\"]/XCUIElementTypeOther[8]/XCUIElementTypeSecureTextField";
+	String xPathEmailNegocio = "//XCUIElementTypeOther[@name=\"Claro drive\"]/XCUIElementTypeOther[8]/XCUIElementTypeTextField";
+	String xPathPasswordNegocio = "//XCUIElementTypeOther[@name=\"Claro drive\"]/XCUIElementTypeOther[9]/XCUIElementTypeSecureTextField";
 	
 	public void PressButtonSignIn(String buttonName){
 		driver.findElement(By.name(buttonName)).click(); //busca el elemento con findElement, interactúa con .click
@@ -44,6 +44,14 @@ public class InicioSesionPage extends BaseClass{
 	}
 	public void PressTxtFieldPasswordNegocio() {
 		driver.findElement(By.xpath(xPathPasswordNegocio)).click();
+		
+	}
+	public void WriteNegocioEmail(String email) {
+		driver.findElement(By.xpath(xPathEmailNegocio)).sendKeys(email);
+		
+	}
+	public void WriteNegocioPassword(String pass) {
+		driver.findElement(By.xpath(xPathPasswordNegocio)).sendKeys(pass);
 		
 	}
 	
