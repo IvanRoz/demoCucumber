@@ -4,6 +4,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.ios.IOSDriver;
@@ -20,23 +21,47 @@ public class BaseClass {
 				caps.setCapability("automationName", "XCUITest");
 				caps.setCapability("noReset", true);
 				caps.setCapability("fullReset", false);
-				caps.setCapability("platformVersion", "15.4");
-				caps.setCapability("deviceName", "iPhone 12");
+				caps.setCapability("platformVersion", "15.0");
+				caps.setCapability("deviceName", "iPhone 11 iOS 15");
 				
-				caps.setCapability("app","/Users/jorgeivanrodriguezzarco/Library/Developer/Xcode/DerivedData/ClaroDrive-chxvhamvpvazmcdzsoacfjpduqoy/Build/Products/Debug-iphonesimulator/ClaroDrive.app");
+				caps.setCapability("app","/Users/becario/Library/Developer/Xcode/DerivedData/ClaroDrive-dhkamurknolfyofhqmtddwvefphf/Build/Products/Debug-iphonesimulator/ClaroDrive.app");
 								
 				URL url = new URL("http://127.0.0.1:4723/wd/hub");
 				
 				driver = new IOSDriver(url, caps);
 				driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-				
-				
 			} catch (MalformedURLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			  
+		}
+		
+		//Metodo para esperar n intentos hasta que aparece un elemento
+
+		public boolean waitForElement(By identificator, int intents) {
 			
+			while(intents > 0) {
+				
+				if (isVisible(identificator)) {
+					return true;
+				}
+				intents--;
+			}
+		
+			System.out.println("No encontre el elemento "+identificator.toString());
+			return false;
+		}
+
+		//Metodo que pregunta si es visible un elemento
+
+		public boolean isVisible(By identificator){
+	
+			if(driver.findElements(identificator).size() > 0) {
+				return true;
+			} else {
+				return false;
+			}
+
 		}
 
 }
