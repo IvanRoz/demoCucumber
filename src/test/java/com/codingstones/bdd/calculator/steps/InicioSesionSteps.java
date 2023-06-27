@@ -63,6 +63,26 @@ public class InicioSesionSteps {
 	public void i_tap_in_negocio_password_text_field() {
 		inicioSesion.PressTxtFieldPasswordNegocio();
 	}
+	
+	@Then("I tap in Claro video email text field")
+	public void i_tap_in_claro_video_email_text_field() {
+		inicioSesion.PressTxtFieldEmailClaroVideo();
+	}
+	@Then("I Write the Claro video email {string}")
+	public void i_write_the_claro_video_email(String emailCV) {
+		inicioSesion.WriteEmailClaroVideo(emailCV);
+	}
+	@Then("I tap in Claro video password text field")
+	public void i_tap_in_claro_video_password_text_field() {
+		inicioSesion.PressTxtFieldPasswordClaroVideo();
+	}
+	@Then("I Write the Claro video password {string}")
+	public void i_write_the_claro_video_password(String passCV) {
+		inicioSesion.WritePasswordClaroVideo(passCV);
+	}
+
+
+
 
 
 
