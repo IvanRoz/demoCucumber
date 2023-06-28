@@ -1,9 +1,9 @@
+@tagGeneral
 Feature: Login to Claro Drive App
 
 
 Background: Validate that I am in the home portal
 	When I am in some landing
-	Then I tap in Claro Drive logo to return home portal
 
 @tagInicioCorreo
 Scenario: Login with email account

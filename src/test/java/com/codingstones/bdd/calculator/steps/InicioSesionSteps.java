@@ -85,10 +85,7 @@ public class InicioSesionSteps {
 	public void i_am_in_some_landing() {
 	    inicioSesion.ValidateLanding();
 	}
-	@Then("I tap in Claro Drive logo to return home portal")
-	public void i_tap_in_claro_drive_logo_to_return_home_portal() {
-	    inicioSesion.PressCDLogo();
-	}
+
 
 
 

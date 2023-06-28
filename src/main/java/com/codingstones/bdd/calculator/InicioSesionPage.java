@@ -74,19 +74,20 @@ public class InicioSesionPage extends BaseClass{
 		driver.findElement(By.xpath(xPathPasswordCV)).sendKeys(Keys.ENTER);
 	}
 	public void ValidateLanding() {
+		System.out.println("Sí entre al BG");
 		if(isVisible(By.xpath(xPathEmail1))) {
-			driver.findElement(By.xpath(xPathLogoCD)).click();
+			driver.findElement(By.name("CANCELAR")).click();
+			System.out.println("Estabas en landing cliente masivo/telmex/telcel");
 		}
 		else if (isVisible(By.xpath(xPathEmailCV))){
-			driver.findElement(By.xpath(xPathLogoCD)).click();
+			driver.findElement(By.name("CANCELAR")).click();
+			System.out.println("Estabas en landing Claro Video");
 		}
 		else if (isVisible(By.xpath(xPathEmailNegocio))) {
-			driver.findElement(By.xpath(xPathLogoCD)).click();
+			driver.findElement(By.name("IR A CLARO DRIVE PERSONAL")).click();
+			System.out.println("Estabas en landing Negocio");
 		}
 		
 	}
-	public void PressCDLogo() {
-		// TODO Auto-generated method stub
-		
-	}
+
 }
