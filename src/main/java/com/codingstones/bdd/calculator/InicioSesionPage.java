@@ -14,6 +14,7 @@ public class InicioSesionPage extends BaseClass{
 	String xPathPasswordNegocio = "//XCUIElementTypeOther[@name=\"Claro drive\"]/XCUIElementTypeOther[9]/XCUIElementTypeSecureTextField";
 	String xPathEmailCV = "//XCUIElementTypeOther[@name=\"Claro drive\"]/XCUIElementTypeOther[7]/XCUIElementTypeTextField";
 	String xPathPasswordCV = "//XCUIElementTypeOther[@name=\"Claro drive\"]/XCUIElementTypeOther[8]/XCUIElementTypeSecureTextField";
+	String xPathLogoCD = "//XCUIElementTypeOther[@name=\"logo / claro drive black\"]";
 	
 	public void PressButtonSignIn(String buttonName){
 		driver.findElement(By.name(buttonName)).click(); //busca el elemento con findElement, interactúa con .click
@@ -71,5 +72,21 @@ public class InicioSesionPage extends BaseClass{
 	public void WritePasswordClaroVideo(String passCV) {
 		driver.findElement(By.xpath(xPathPasswordCV)).sendKeys(passCV);
 		driver.findElement(By.xpath(xPathPasswordCV)).sendKeys(Keys.ENTER);
+	}
+	public void ValidateLanding() {
+		if(isVisible(By.xpath(xPathEmail1))) {
+			driver.findElement(By.xpath(xPathLogoCD)).click();
+		}
+		else if (isVisible(By.xpath(xPathEmailCV))){
+			driver.findElement(By.xpath(xPathLogoCD)).click();
+		}
+		else if (isVisible(By.xpath(xPathEmailNegocio))) {
+			driver.findElement(By.xpath(xPathLogoCD)).click();
+		}
+		
+	}
+	public void PressCDLogo() {
+		// TODO Auto-generated method stub
+		
 	}
 }
