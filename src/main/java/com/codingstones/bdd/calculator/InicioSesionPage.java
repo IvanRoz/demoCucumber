@@ -89,5 +89,15 @@ public class InicioSesionPage extends BaseClass{
 		}
 		
 	}
+	public void ValidateLoggedIn() {
+		if(isVisible(By.name("Más"))) {
+			driver.findElement(By.name("Más")).click();
+			mobileScrollScreenIOS("UP");
+			driver.findElement(By.name("Cerrar sesión")).click();
+			driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Aceptar\"]")).click();
+			waitForElement(By.name("INICIA SESIÓN"),20);
+		}
+		
+	}
 
 }

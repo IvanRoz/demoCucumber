@@ -3,6 +3,7 @@ package com.codingstones.bdd.calculator;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
+import java.util.HashMap;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -76,5 +77,34 @@ public class BaseClass {
 			touchAction.tap(new PointOption().withCoordinates(keyboardPoint.getX() + 2, keyboardPoint.getY() + 0)).perform();
 
 			}
+		
+		//Metodo creado para hacer scroll
+
+		public void mobileScrollScreenIOS(String dir) {
+			
+			System.out.println("mobileScrollScreenIOS(): dir: '" + dir + "'");
+
+			//final int ANIMATION_TIME = 200; // ms
+
+			final HashMap<String, String> scrollObject = new HashMap<String, String>();
+			switch (dir) {
+				case "DOWN":
+					scrollObject.put("direction", "down");
+					break;
+				case "UP":
+					scrollObject.put("direction", "up");
+					break;
+				default:
+					throw new IllegalArgumentException("mobileScrollIOS(): dir: '" + dir + "' NOT supported");
+			}
+			try {
+				driver.executeScript("mobile:swipe", scrollObject);
+			// Thread.sleep(ANIMATION_TIME);
+			} catch (Exception e) {
+				System.err.println("mobileScrollIOS(): FAILED\n" + e.getMessage());
+				return;
+			}
+
+		}
 
 }

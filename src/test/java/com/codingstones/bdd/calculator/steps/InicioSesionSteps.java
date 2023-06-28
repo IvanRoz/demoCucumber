@@ -85,6 +85,12 @@ public class InicioSesionSteps {
 	public void i_am_in_some_landing() {
 	    inicioSesion.ValidateLanding();
 	}
+	
+	@When("I am logged in")
+	public void i_am_logged_in() {
+		inicioSesion.ValidateLoggedIn();
+	}
+
 
 
 
